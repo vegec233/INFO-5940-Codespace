@@ -1,3 +1,23 @@
+## Instruction for Running Application
+1. **Open the terminal** inside your Codespace.
+2. To run the Streamlit app and set up the key at the same time, run both commands together in Terminal:
+   ```bash
+   API_KEY="your_actual_API_KEY" streamlit run your-file-name.py
+   ```
+
+## Feature Overview
+This application lets users upload one or more documents (TXT or PDF) and then ask questions about their contents in a chat-style interface. It runs a lightweight Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI (GPT-4o), and Chroma for semantic search.
+
+Available Features:
+1. Retrieval-Augmented Generation (RAG): It searches your uploaded files for the most relevant text and uses that as context for GPT-4o to answer questions accurately. 
+2. Guided chat start: The chat opens with a friendly reminder to upload files first, so users know the flow.
+3. Multi-file support: You can upload multiple .txt or .pdf files and query across all of them at once. 
+4. Interactive chat interface: You can chat naturally with the app, see past messages, and expand “Sources” to verify where each answer came from. 
+
+## Changes Made
+- I frequently referred to the code in the Jupyter Notebook provided (Alternative: Manual RAG without LangGraph) while developing the chatbot. I initially tried to follow the original template that used the OpenAI client setup. However, I encountered the following error message: ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject. This error possibly occurs when displaying the answers after chunk retrieval, based on the line number displayed with the error message. I wasn't sure how to fix it. Tried to ask ChatGPT and it did not work out either. So I decided to directly follow the method shown in the Jupyter Notebook and with help from ChatGPT, I finally got this chatbot working.
+- Rewrite the start message so it reminds users to upload files first.
+
 # INFO 5940 
 Welcome to the INFO 5940 repository. You will complete your work using [**GitHub Codespaces**](#about-github-codespaces) and save your progress in your own GitHub repository. This guide will walk you through setting up the development environment and running the test notebook.  
 
@@ -90,3 +110,4 @@ You will receive an individual API Key for class assignments. To prevent acciden
 
 ## Troubleshooting
 - The Jupyter extension should install automatically. If you still cannot select a Python kernel on Jupyter Notebook: Go to the left sidebar >> **Extensions** >> search for **Jupyter** >> reload window (or reinstall it).   
+
