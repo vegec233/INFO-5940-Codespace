@@ -4,6 +4,8 @@
    ```bash
    API_KEY="your_actual_API_KEY" streamlit run your-file-name.py
    ```
+3. Click the “Browse files” button to upload files. You can add multiple files by clicking the same button again after one file has been uploaded.
+4. Start the chat after you have uploaded all the files.
 
 ## Feature Overview
 This application lets users upload one or more documents (TXT or PDF) and then ask questions about their contents in a chat-style interface. It runs a lightweight Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI (GPT-4o), and Chroma for semantic search.
