@@ -2,7 +2,7 @@
 1. **Open the terminal** inside your Codespace.
 2. To run the Streamlit app and set up the key at the same time, run both commands together in Terminal:
    ```bash
-   API_KEY="your_actual_API_KEY" streamlit run your-file-name.py
+   API_KEY="your_actual_API_KEY" streamlit chat_with_pdf.py
    ```
 3. Click the “Browse files” button to upload files. You can add multiple files by clicking the same button again after one file has been uploaded.
 4. Start the chat after you have uploaded all the files.
